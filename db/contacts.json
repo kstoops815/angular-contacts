@@ -1,0 +1,93 @@
+{
+	"contacts": [{
+			"firstName": "Beauty",
+			"middleName": "And the",
+			"lastName": "Beast",
+			"nickName": "Beauty",
+			"address": "1234 Beastly Way, Forest, MN, 123456",
+			"phoneNumber": "555-654-1234",
+			"birthday": "December 1, 1965"
+		},
+		{
+			"firstName": "Snow",
+			"middleName": "Pale",
+			"lastName": "White",
+			"nickName": "Whitey",
+			"address": "7 Dwarfs Ln, Cold, MN, 45678",
+			"phoneNumber": "555-321-4321",
+			"birthday": "January 15, 1987"
+		},
+		{
+			"firstName": "Sleeping",
+			"middleName": "Anywhere",
+			"lastName": "Beauty",
+			"nickName": "Tired One",
+			"address": "900 Sleepy Rd, Exhausted, TN, 98765",
+			"phoneNumber": "194-555-3344",
+			"birthday": "June 3, 1934"
+		},
+		{
+			"firstName": "Cinderella",
+			"middleName": "Ann",
+			"lastName": "Glass",
+			"nickName": "Cindy",
+			"address": "765 Slipper Ln, Princess, LA, 33333",
+			"phoneNumber": "888-999-0000",
+			"birthday": "February 29, 1980"
+		},
+		{
+			"firstName": "Ariel",
+			"middleName": "Of the",
+			"lastName": "Sea",
+			"nickName": "Mermy",
+			"address": "6 Saltwater Rd, Lost Sea City, Atlantica, AO, 33421",
+			"phoneNumber": "111-555-2222",
+			"birthday": "August 10, 1970"
+		},
+		{
+			"firstName": "Rapunzel",
+			"middleName": "Long",
+			"lastName": "Hair",
+			"nickName": "Blondy",
+			"address": "45 Castle St, Stoney St, Kingdom, MI, 44532",
+			"phoneNumber": "987-654-3210",
+			"birthday": "March 9, 1954"
+		},
+		{
+			"firstName": "Pochahontas",
+			"middleName": "Nahla",
+			"lastName": "Tribe",
+			"nickName": "Pokey",
+			"address": "331 Land Rd, Adventure, AL, 94564",
+			"phoneNumber": "888-435-2211",
+			"birthday": "November 12, 1925"
+		},
+		{
+			"firstName": "Tiana",
+			"middleName": "Star",
+			"lastName": "Cook",
+			"nickName": "Ti-Ti",
+			"address": "999 Beignets Rd, New Orleans, LA, 23444",
+			"phoneNumber": "775-555-7777",
+			"birthday": "September 4, 1967"
+		},
+		{
+			"firstName": "Merida",
+			"middleName": "Elinor",
+			"lastName": "Archer",
+			"nickName": "Red",
+			"address": "344 Kingdom Ln, DunBroch, Scotland",
+			"phoneNumber": "666-444-3333",
+			"birthday": "June 18, 1987"
+		},
+		{
+			"firstName": "Mulan",
+			"middleName": "Inner",
+			"lastName": "Warrior",
+			"nickName": "Fighter",
+			"address": "9090 Old Ln, Ancient China",
+			"phoneNumber": "777-111-1111",
+			"birthday": "October 1, 1665"
+		}
+	]
+}
