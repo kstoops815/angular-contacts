@@ -1,3 +1,5 @@
+/*globals app: true*/
+
 "use strict";
 
-console.log("works?");
+const app = angular.module("MyContacts", ["ngAnimate", "ngRoute", "ngSanitize"]);
