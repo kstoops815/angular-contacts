@@ -1,6 +1,6 @@
 {
 	"contacts": {
-		"contact1": {
+		"contact0": {
 			"firstName": "Beauty",
 			"middleName": "And the",
 			"lastName": "Beast",
@@ -8,9 +8,9 @@
 			"address": "1234 Beastly Way, Forest, MN, 123456",
 			"phoneNumber": "555-654-1234",
 			"birthday": "December 1, 1965",
-			"uid": "12345"
+			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
-		"contact2": {
+		"contact1": {
 			"firstName": "Snow",
 			"middleName": "Pale",
 			"lastName": "White",
@@ -18,9 +18,9 @@
 			"address": "7 Dwarfs Ln, Cold, MN, 45678",
 			"phoneNumber": "555-321-4321",
 			"birthday": "January 15, 1987",
-			"uid": "12345"
+			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
-		"contact3": {
+		"contact2": {
 			"firstName": "Sleeping",
 			"middleName": "Anywhere",
 			"lastName": "Beauty",
@@ -28,9 +28,9 @@
 			"address": "900 Sleepy Rd, Exhausted, TN, 98765",
 			"phoneNumber": "194-555-3344",
 			"birthday": "June 3, 1934",
-			"uid": "12345"
+			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
-		"contact4": {
+		"contact3": {
 			"firstName": "Cinderella",
 			"middleName": "Ann",
 			"lastName": "Glass",
@@ -38,9 +38,9 @@
 			"address": "765 Slipper Ln, Princess, LA, 33333",
 			"phoneNumber": "888-999-0000",
 			"birthday": "February 29, 1980",
-			"uid": "12345"
+			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
-		"contact5": {
+		"contact4": {
 			"firstName": "Ariel",
 			"middleName": "Of the",
 			"lastName": "Sea",
@@ -48,9 +48,9 @@
 			"address": "6 Saltwater Rd, Lost Sea City, Atlantica, AO, 33421",
 			"phoneNumber": "111-555-2222",
 			"birthday": "August 10, 1970",
-			"uid": "12345"
+			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
-		"contact6": {
+		"contact5": {
 			"firstName": "Rapunzel",
 			"middleName": "Long",
 			"lastName": "Hair",
@@ -60,7 +60,7 @@
 			"birthday": "March 9, 1954",
 			"uid": "12345"
 		},
-		"contact7": {
+		"contact6": {
 			"firstName": "Pochahontas",
 			"middleName": "Nahla",
 			"lastName": "Tribe",
@@ -70,7 +70,7 @@
 			"birthday": "November 12, 1925",
 			"uid": "12345"
 		},
-		"contact8": {
+		"contact7": {
 			"firstName": "Tiana",
 			"middleName": "Star",
 			"lastName": "Cook",
@@ -80,7 +80,7 @@
 			"birthday": "September 4, 1967",
 			"uid": "12345"
 		},
-		"contact9": {
+		"contact8": {
 			"firstName": "Merida",
 			"middleName": "Elinor",
 			"lastName": "Archer",
@@ -90,7 +90,7 @@
 			"birthday": "June 18, 1987",
 			"uid": "12345"
 		},
-		"contact10": {
+		"contact9": {
 			"firstName": "Mulan",
 			"middleName": "Inner",
 			"lastName": "Warrior",
