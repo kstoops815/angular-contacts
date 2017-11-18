@@ -58,9 +58,5 @@ app.config(function($routeProvider){
 		templateUrl: "partials/contacts/view.html",
 		controller: "ViewCtrl"
 	})
-	.when("/login", {
-		templateUrl: "partials/auth.html",
-		controller: "AuthCtrl"
-	})
 	.otherwise("/auth");
 });

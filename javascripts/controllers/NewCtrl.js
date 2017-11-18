@@ -21,7 +21,7 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
 		let newContact = createContact(contact);
 		console.log("new contact", newContact);
 		ContactsService.postNewContact(newContact).then(() => {
-			$location.path("/view");
+			$location.path("contacts/view");
 		}).catch((error) => {
 			console.log("error in saveNewContact", error);
 		});
@@ -31,30 +31,4 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
 
 
 });
-
-
-
-// 	$scope.clickSubmit = (event) => {
-// 		console.log("event", event.target.value);
-// 		let newContact = createContact();
-// 		ContactsService.postNewContact(newContact).then((results) => {
-// 			ContactsService.getAllContacts().then((results) => {
-// 				$location.path("/view");
-// 		}).catch((error) => {
-// 			console.log("error in getAllContacts", error);
-// 		};
-
-// 	};
-// });
-
-
-	// $scope.showContacts = (contact) => {
-	// 	let newContact = createContact(contact);
-	// 	ContactsService.postNewContact(newContact).then(() => {
-	// 		$location.path("/view");
-	// 	}).catch((error) => {
-	// 		console.log("error in showContacts", error);
-	// 	});
-	// };
-
 
