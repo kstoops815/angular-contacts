@@ -25,12 +25,14 @@ app.service("ContactsService", function($http, $q, FIREBASE_CONFIG){
 	};
 
 
+	const deleteContact = (contactId) => {
+		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
+	};
 
 
 
 
-
-	return {getAllContacts, postNewContact};
+	return {getAllContacts, postNewContact, deleteContact};
 });
 
 

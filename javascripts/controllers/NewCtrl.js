@@ -18,9 +18,9 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
 
 
 	$scope.saveNewContact = (contact) => {
-		console.log("contact", contact);
 		let newContact = createContact(contact);
-		ContactsService.postNewContact(contact).then((results) => {
+		console.log("new contact", newContact);
+		ContactsService.postNewContact(newContact).then(() => {
 			$location.path("/view");
 		}).catch((error) => {
 			console.log("error in saveNewContact", error);

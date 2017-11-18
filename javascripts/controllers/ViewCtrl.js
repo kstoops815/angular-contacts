@@ -6,14 +6,15 @@ app.controller("ViewCtrl", function($rootScope, $scope, ContactsService){
 		console.log("in showContacts");
 		ContactsService.getAllContacts($rootScope.uid).then((results) => {
 			$scope.contacts = results;
-			console.log("in show contacts", results);
 		}).catch((error) => {
 			console.log("error in show Contacts", error);
 		});
 	};
 
+	showContacts();
+
 	$scope.deleteContact = (contactId) => {
-		ContactsService.deleteMovie(contactId).then((result) =>{
+		ContactsService.deleteContact(contactId).then((result) =>{
 			showContacts();
 		}).catch((error) => {
 			console.log("error in deleteContact", error);
@@ -21,7 +22,6 @@ app.controller("ViewCtrl", function($rootScope, $scope, ContactsService){
 	};
 
 
-	showContacts();
 
 
 });
