@@ -1,12 +1,12 @@
 "use strict";
 
-app.controller("LoginCtrl", function($location, $rootScope, $scope, LoginService){
+app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthService){
 	$scope.authenticate = () => {
-		LoginService.authenticateGoogle().then((result) => {
+		AuthService.authenticateGoogle().then((result) => {
 			$rootScope.uid = result.user.uid;
 			console.log("$rootScope", $rootScope.uid);
 			$scope.$apply(() => {
-				$location.url("/search");
+				$location.url("/contacts/view");
 			});			
 		}).catch((error) => {
 			console.log("error in authenticateGoogle", error);

@@ -1,4 +1,36 @@
 <div class="text-center" id="new">
 	<h1>Add New Contact</h1>
-	{{controller}}
+	<div>
+	  <form class="form-horizontal" name="newContactForm">
+	    <div class="form-group">
+	      <label for="inputFirstName">First Name: </label>
+	      <input type="text" id="inputFirstName" placeholder="First Name" ng-model="contact.firstName" required>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputMiddleName">Middle Name: </label>
+	      <input type="text" id="inputMiddleName" placeholder="Middle Name" ng-model="contact.MiddleName" required>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputLastName">Last Name: </label>
+	      <input type="text" id="inputLastName" placeholder="Last Name" ng-model="contact.lastName" required>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputNickName">Nick Name: </label>
+	      <input type="text" id="inputNickName" placeholder="Nick Name" ng-model="contact.nickName" required>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputAddress">Address: </label>
+	      <input type="text" id="inputAddress" placeholder="Address" ng-model="contact.address" required>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhoneNumber">Phone Number: </label>
+	      <input type="tel" id="inputPhoneNumber" placeholder="Phone Number" ng-model="contact.phoneNumber" required>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputBirthday">Birthday: </label>
+	      <input type="text" id="inputBirthday" placeholder="Birthday" ng-model="contact.birthday" required>
+	    </div>
+	    <button type="submit" class="btn btn-default" ng-disabled="newContactForm.$invalid" ng-click="saveNewContact(contact)">Submit</button>
+	  </form>
+	</div>
 </div>
