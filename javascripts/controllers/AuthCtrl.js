@@ -6,7 +6,7 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthService){
 			$rootScope.uid = result.user.uid;
 			console.log("$rootScope", $rootScope.uid);
 			$scope.$apply(() => {
-				$location.url("/search");
+				$location.url("/contacts/view");
 			});			
 		}).catch((error) => {
 			console.log("error in authenticateGoogle", error);
