@@ -18,7 +18,7 @@ app.controller("FavoritesCtrl", function($rootScope, $scope, ContactsService){
 	$scope.unFavorite = (contact, contactId) => {
 		contact.isFavorite = false;
 		let updatedContact = ContactsService.createContactObject(contact);
-		ContactsService.updateContact(updatedContact, contactId).then((result) => {
+		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
 			showContacts();
 			}).catch((error) => {
 				console.log("error in switchFavorite", error);
