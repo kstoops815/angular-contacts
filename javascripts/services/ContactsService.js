@@ -1,6 +1,6 @@
 "use strict";
 
-app.service("ContactsService", function($http, $q, FIREBASE_CONFIG){
+app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG){
 	const getAllContacts = (userUid) => {
 		let contacts = [];
 		return $q((resolve, reject) => {
@@ -17,6 +17,22 @@ app.service("ContactsService", function($http, $q, FIREBASE_CONFIG){
 		});
 	};
 
+	const createContactObject = (contact) => {
+		return {
+			"firstName": contact.firstName,
+			"middleName": contact.middleName,
+ 			"lastName": contact.lastName,
+ 			"nickName": contact.nickName,
+ 			"address": contact.address,
+ 			"phoneNumber": contact.phoneNumber,
+			 "birthday": contact.birthday,
+			 "isFavorite": contact.isFavorite,
+ 			"uid": $rootScope.uid
+		};
+	};
+
+
+
 
 	const postNewContact = (newContact) => {
 		return $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify(newContact));
@@ -27,10 +43,14 @@ app.service("ContactsService", function($http, $q, FIREBASE_CONFIG){
 		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
 	};
 
+	const updateContact = (contact, contactId) => {
+		return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`, JSON.stringify(contact));
+	};
 
 
 
-	return {getAllContacts, postNewContact, deleteContact};
+
+	return {getAllContacts, postNewContact, deleteContact, updateContact, createContactObject};
 });
 
 
