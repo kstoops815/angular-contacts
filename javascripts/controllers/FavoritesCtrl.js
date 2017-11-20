@@ -5,28 +5,25 @@ app.controller("FavoritesCtrl", function($rootScope, $scope, ContactsService){
 
 	const showContacts = () => {
 		console.log("in showContacts");
-		ContactsService.getAllContacts($rootScope.uid).then((results) => {
+		ContactsService.getFavoriteContacts($rootScope.uid).then((results) => {
 			$scope.contacts = results;
+			console.log("showCOntacts", results);
 		}).catch((error) => {
 			console.log("error in show Contacts", error);
 		});
 	};
-	
-	$scope.favoriteChange = (contact, contactId) => {
-		if(contact.isFavorite) {
-			contact.isFavorite = false;
-		} else {(contact.isFavorite = true);
-			// let updatedContact = ContactsService.createContactObject(contact);
-			// console.log("updated contact", updatedContact);
-			// ContactsService.updateContact(updatedContact).then((results) => {
-			// 	showContacts();
-			// }).catch((error) => {
-			// 	console.log("error in updatedContact", error);
-			// });
-		}
-	};
 
+	showContacts();
 	
+	$scope.unFavorite = (contact, contactId) => {
+		contact.isFavorite = false;
+		let updatedContact = ContactsService.createContactObject(contact);
+		ContactsService.updateContact(updatedContact, contactId).then((result) => {
+			showContacts();
+			}).catch((error) => {
+				console.log("error in switchFavorite", error);
+		});
+	};
 
 
 

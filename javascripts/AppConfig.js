@@ -58,5 +58,9 @@ app.config(function($routeProvider){
 		templateUrl: "partials/contacts/view.html",
 		controller: "ViewCtrl"
 	})
+	.when("/contacts/detail:id", {
+		templateUrl: "partials/contacts/contact-detail.html",
+		controller: "ContactDetailCtrl"
+	})
 	.otherwise("/login");
 });

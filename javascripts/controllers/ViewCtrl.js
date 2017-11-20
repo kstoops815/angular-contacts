@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("ViewCtrl", function($rootScope, $scope, ContactsService){
+app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsService){
 	$scope.contact = {};
 
 	const showContacts = () => {
@@ -22,41 +22,29 @@ app.controller("ViewCtrl", function($rootScope, $scope, ContactsService){
 		});
 	};
 
-
 	$scope.favoriteChange = (contact, contactId) => {
-		if(contact.isFavorite) {
+		if(!contact.isFavorite) {
+			contact.isFavorite = true;
+		} else {
 			contact.isFavorite = false;
-		} else {(contact.isFavorite = true);
-			// let updatedContact = ContactsService.createContactObject(contact);
-			// console.log("updated contact", updatedContact);
-			// ContactsService.updateContact(updatedContact).then((results) => {
-			// 	showContacts();
-			// }).catch((error) => {
-			// 	console.log("error in updatedContact", error);
-			// });
 		}
+		let updatedContact = ContactsService.createContactObject(contact);
+		// ContactsService.updateContact(updatedContact, contactId).then((result) => {
+		// 	showContacts();
+		
+	};
+	
+	$scope.switchFavorite = (contact, contactId) => {
+		contact.isFavorite = true;
+		let updatedContact = ContactsService.createContactObject(contact);
+		ContactsService.updateContact(updatedContact, contactId).then((result) => {
+			showContacts();
+			}).catch((error) => {
+				console.log("error in switchFavorite", error);
+		});
 	};
 
-	// $scope.favoriteChange = (contact, contactId) => {
-	// 	console.log("in favoriteChange");
-	// 	ContactsService.getAllContacts($rootScope.uid).then((results) => {
-	// 		console.log("results", results);
-	// 		$scope.contact = results;
-	// 		console.log("scope.contact", $scope.contact);
-	// 		if(contact.isFavorite === true) {
-	// 			contact.isFavorite = false;
-	// 			} else {
-	// 				contact.isFavorite = true;
-	// 			}
-	// 			let updatedContact = ContactsService.createContactObject(contact);
-	// 			console.log("updated contact", updatedContact);
-	// 			ContactsService.updateContact(updatedContact).then((results) => {
-	// 				showContacts();
-	// 	}).catch((error) => {
-	// 			console.log("error in updatedContact", error);
-	// 	});
-	// 	});
-	// };
 
+	
 
 });
