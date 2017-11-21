@@ -15,8 +15,8 @@ app.controller("EditCtrl", function($location, $routeParams, $scope, ContactsSer
 
   $scope.editContact = (contact, contactId) => {
 		let contactToEdit = ContactsService.createContactObject(contact);
-		console.log("contactToEdit", contactToEdit);
-		ContactsService.updateContact(contactToEdit).then(() => {
+		console.log("contactToEdit", contactToEdit, $routeParams.id);
+		ContactsService.updateContact(contactToEdit, $routeParams.id).then(() => {
 			$location.path("contacts/view");
 		}).catch((error) => {
 			console.log("error in editContact", error);
