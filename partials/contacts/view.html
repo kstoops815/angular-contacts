@@ -5,6 +5,10 @@
 		<div ng-repeat="contact in contacts" class="col-sm-6 contact">
 			<div class="thumbnail">
 				<button class="btn btn-default delete" ng-click="deleteContact(contact.id)">X</button>
+				<button class="btn btn-default star" ng-if="!contact.isFavorite" ng-click="switchFavorite(contact, contact.id)"><i class="fa fa-star-o" aria-hidden="true" ></i></button>
+				<button class="btn btn-default star" ng-if="contact.isFavorite" ng-click="unFavorite(contact, contactId)"><i class="fa fa-star" aria-hidden="true" ></i></button>
+				<button class="btn btn-default pencil" ng-click="editContactInfo(contact.id)"><i class="fa fa-pencil" aria-hidden="true" ng-click="editContactInfo(contact.id)"></i></button>
+				<button class="btn btn-default search" ng-click="viewDetails(contact.id)"><i class="fa fa-search" aria-hidden="true"></i></button>
 				<h3 class="name">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h3>
 				<p class="nickName">{{contact.nickName}}</p>
 				<p class="phoneNumber">{{contact.phoneNumber}}</p>

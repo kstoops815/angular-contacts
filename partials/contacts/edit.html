@@ -1,5 +1,5 @@
-<div class="text-center" id="new">
-	<h1>Add New Contact</h1>
+<div class="text-center" id="edit">
+	<h1>Edit Contact</h1>
 	<div>
 	  <form class="form-horizontal" name="newContactForm">
 	    <div class="form-group">
@@ -30,7 +30,16 @@
 	      <label for="inputBirthday">Birthday: </label>
 	      <input type="text" id="inputBirthday" placeholder="Birthday" ng-model="contact.birthday" required>
 	    </div>
-	    <button type="submit" class="btn btn-default" ng-disabled="newContactForm.$invalid" ng-click="saveNewContact(contact)">Submit</button>
+	    <button type="submit" class="btn btn-default" ng-disabled="newContactForm.$invalid" ng-click="editContact(contact)">Submit</button>
 	  </form>
 	</div>
 </div>
+
+
+
+
+<!-- <h3 class="name">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h3>
+<p class="nickName">{{contact.nickName}}</p>
+<p class="phoneNumber">{{contact.phoneNumber}}</p>
+<p class="address">{{contact.address}}</p>
+<p class="birthday">{{contact.birthday}}</p> -->
