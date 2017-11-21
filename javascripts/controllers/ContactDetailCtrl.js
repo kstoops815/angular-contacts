@@ -6,7 +6,6 @@ app.controller("ContactDetailCtrl", function($routeParams, $scope, ContactsServi
   const getContact = () => {
     ContactsService.getSingleContact($routeParams.id).then((results) => {
       $scope.contact = results.data;
-      console.log("single contact", $scope.contact);
     }).catch((error) => {
       console.log("error in getSingleMovie", error);
     });

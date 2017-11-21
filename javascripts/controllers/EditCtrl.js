@@ -5,7 +5,6 @@ app.controller("EditCtrl", function($location, $routeParams, $scope, ContactsSer
   const getContactInfo = () => {
     ContactsService.getSingleContact($routeParams.id).then((results) => {
       $scope.contact = results.data;
-      console.log("single contact", $scope.contact);
     }).catch((error) => {
       console.log("error in getSingleMovie", error);
     });
@@ -15,7 +14,6 @@ app.controller("EditCtrl", function($location, $routeParams, $scope, ContactsSer
 
   $scope.editContact = (contact, contactId) => {
 		let contactToEdit = ContactsService.createContactObject(contact);
-		console.log("contactToEdit", contactToEdit, $routeParams.id);
 		ContactsService.updateContact(contactToEdit, $routeParams.id).then(() => {
 			$location.path("contacts/view");
 		}).catch((error) => {
