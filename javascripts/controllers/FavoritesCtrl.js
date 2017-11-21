@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("FavoritesCtrl", function($rootScope, $scope, ContactsService){
+app.controller("FavoritesCtrl", function($location, $rootScope, $scope, ContactsService){
 
 
 	const showContacts = () => {
@@ -25,6 +25,9 @@ app.controller("FavoritesCtrl", function($rootScope, $scope, ContactsService){
 		});
 	};
 
+	$scope.viewDetails = (contactId) => {
+		$location.path(`/contacts/${contactId}`);
+	};
 
 
 

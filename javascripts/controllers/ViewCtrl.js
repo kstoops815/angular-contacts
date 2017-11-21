@@ -32,18 +32,6 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 				console.log("error in switchFavorite", error);
 		});
 	};
-
-	// $scope.favoriteChange = (contact, contactId) => {
-	// 	if(!contact.isFavorite) {
-	// 		contact.isFavorite = true;
-	// 	} else {
-	// 		contact.isFavorite = false;
-	// 	}
-	// 	let updatedContact = ContactsService.createContactObject(contact);
-	// 	// ContactsService.updateContact(updatedContact, contactId).then((result) => {
-	// 	// 	showContacts();
-		
-	// };
 	
 	$scope.switchFavorite = (contact, contactId) => {
 		contact.isFavorite = true;
@@ -53,6 +41,12 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 			}).catch((error) => {
 				console.log("error in switchFavorite", error);
 		});
+	};
+
+
+
+	$scope.viewDetails = (contactId) => {
+		$location.path(`/contacts/detail/${contactId}`);
 	};
 
 
