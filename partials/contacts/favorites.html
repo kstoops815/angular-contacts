@@ -6,7 +6,7 @@
 				<button class="btn btn-default delete" ng-click="deleteContact(contact.id)">X</button>
 				<button class="btn btn-default star" ng-if="contact.isFavorite"><i class="fa fa-star" aria-hidden="true" ng-click="unFavorite(contact, contactId)"></i></button>
 				<button class="btn btn-default pencil"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-				<button class="btn btn-default search"><i class="fa fa-search" aria-hidden="true"></i></button>
+				<button class="btn btn-default search"><i class="fa fa-search" aria-hidden="true" ng-click="editContactInfo(contact.id)"></i></button>
 				<h3 class="name">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h3>
 				<p class="nickName">{{contact.nickName}}</p>
 				<p class="phoneNumber">{{contact.phoneNumber}}</p>

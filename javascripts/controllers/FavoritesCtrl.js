@@ -26,7 +26,11 @@ app.controller("FavoritesCtrl", function($location, $rootScope, $scope, Contacts
 	};
 
 	$scope.viewDetails = (contactId) => {
-		$location.path(`/contacts/${contactId}`);
+		$location.path(`/contacts/details/${contactId}`);
+	};
+
+	$scope.editContactInfo = (contactId) => {
+		$location.path(`/contacts/edit/${contactId}`);
 	};
 
 
