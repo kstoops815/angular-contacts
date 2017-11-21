@@ -7,12 +7,12 @@
 	</div>
 
 	<div id="contacts">
-		<div ng-repeat="contact in contacts | filter: searchText" class="col-sm-3 contact">
-			<div class="thumbnail" ng-class="contact.isSuper ? 'superHero' : '!superHero'">
-				<button class="btn btn-default delete" ng-click="deleteContact(contact.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-				<button class="btn btn-default star" ng-if="!contact.isFavorite"><i class="fa fa-star-o" aria-hidden="true" ng-click="switchFavorite(contact, contact.id)"></i></button>
-				<button class="btn btn-default star" ng-if="contact.isFavorite"><i class="fa fa-star" aria-hidden="true" ng-click="unFavorite(contact, contactId)"></i></button>
-				<button class="btn btn-default pencil" ><i class="fa fa-pencil" aria-hidden="true" ng-click="editContactInfo(contact.id)"></i></button>
+		<div ng-repeat="contact in contacts" class="col-sm-6 contact">
+			<div class="thumbnail">
+				<button class="btn btn-default delete" ng-click="deleteContact(contact.id)">X</button>
+				<button class="btn btn-default star" ng-if="!contact.isFavorite" ng-click="switchFavorite(contact, contact.id)"><i class="fa fa-star-o" aria-hidden="true" ></i></button>
+				<button class="btn btn-default star" ng-if="contact.isFavorite" ng-click="unFavorite(contact, contactId)"><i class="fa fa-star" aria-hidden="true" ></i></button>
+				<button class="btn btn-default pencil" ng-click="editContactInfo(contact.id)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
 				<button class="btn btn-default search" ng-click="viewDetails(contact.id)"><i class="fa fa-search" aria-hidden="true"></i></button>
 				<button class="btn btn-default power"><i class="fa fa-superpowers" aria-hidden="true" ng-click="makeSuper(contact, contact.id)"></i></button>
 				<h3 class="name">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h3>

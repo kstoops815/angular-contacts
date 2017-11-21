@@ -8,7 +8,6 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
 
 	$scope.saveNewContact = (contact) => {
 		let newContact = ContactsService.createContactObject(contact);
-		console.log("new contact", newContact);
 		ContactsService.postContact(newContact).then(() => {
 			$location.path("contacts/view");
 		}).catch((error) => {

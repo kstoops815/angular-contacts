@@ -4,10 +4,8 @@ app.controller("FavoritesCtrl", function($location, $rootScope, $scope, Contacts
 
 
 	const showContacts = () => {
-		console.log("in showContacts");
 		ContactsService.getFavoriteContacts($rootScope.uid).then((results) => {
 			$scope.contacts = results;
-			console.log("showCOntacts", results);
 		}).catch((error) => {
 			console.log("error in show Contacts", error);
 		});

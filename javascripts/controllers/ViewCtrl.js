@@ -4,7 +4,6 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 	$scope.contact = {};
 
 	const showContacts = () => {
-		console.log("in showContacts");
 		ContactsService.getAllContacts($rootScope.uid).then((results) => {
 			$scope.contacts = results;
 		}).catch((error) => {
@@ -24,7 +23,6 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 
 	$scope.unFavorite = (contact, contactId) => {
 		contact.isFavorite = false;
-		console.log("is favorite?", contact.isFavorite);
 		let updatedContact = ContactsService.createContactObject(contact);
 		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
 			showContacts();
