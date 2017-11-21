@@ -9,6 +9,7 @@
 			"phoneNumber": "555-654-1234",
 			"birthday": "December 1, 1965",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
 		"contact1": {
@@ -20,6 +21,7 @@
 			"phoneNumber": "555-321-4321",
 			"birthday": "January 15, 1987",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
 		"contact2": {
@@ -31,6 +33,7 @@
 			"phoneNumber": "194-555-3344",
 			"birthday": "June 3, 1934",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
 		"contact3": {
@@ -42,6 +45,7 @@
 			"phoneNumber": "888-999-0000",
 			"birthday": "February 29, 1980",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
 		"contact4": {
@@ -53,6 +57,7 @@
 			"phoneNumber": "111-555-2222",
 			"birthday": "August 10, 1970",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "qgk4Im6vCnQfwhC7AyNnMa0hsSD3"
 		},
 		"contact5": {
@@ -64,6 +69,7 @@
 			"phoneNumber": "987-654-3210",
 			"birthday": "March 9, 1954",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "aSAiSfi9kGU3iVB8qtsOlBSaTHq2"
 		},
 		"contact6": {
@@ -75,6 +81,7 @@
 			"phoneNumber": "888-435-2211",
 			"birthday": "November 12, 1925",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "aSAiSfi9kGU3iVB8qtsOlBSaTHq2"
 		},
 		"contact7": {
@@ -86,6 +93,7 @@
 			"phoneNumber": "775-555-7777",
 			"birthday": "September 4, 1967",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "aSAiSfi9kGU3iVB8qtsOlBSaTHq2"
 		},
 		"contact8": {
@@ -97,6 +105,7 @@
 			"phoneNumber": "666-444-3333",
 			"birthday": "June 18, 1987",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "aSAiSfi9kGU3iVB8qtsOlBSaTHq2"
 		},
 		"contact9": {
@@ -108,6 +117,7 @@
 			"phoneNumber": "777-111-1111",
 			"birthday": "October 1, 1665",
 			"isFavorite": false,
+			"isSuper": false,
 			"uid": "aSAiSfi9kGU3iVB8qtsOlBSaTHq2"
 		}
 	}

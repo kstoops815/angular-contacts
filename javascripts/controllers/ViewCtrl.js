@@ -43,6 +43,17 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 		});
 	};
 
+	$scope.makeSuper = (contact, contactId) => {
+		console.log("contacts in makeSuper", contact);
+		contact.isSuper = true;
+		let updatedContact = ContactsService.createContactObject(contact);
+		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
+			showContacts();
+		}).catch((error) => {
+			console.log("error in isSuper", error);
+		});
+	};
+
 
 
 	$scope.viewDetails = (contactId) => {
