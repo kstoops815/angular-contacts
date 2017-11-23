@@ -8,12 +8,6 @@
   flex-direction: column;
   justify-content: center;
 
-  
-  .superFont {
-    font-weight: bold;
-    color: $white;
-  }
-
   .delete {
     position: absolute;
     left: 130px;
@@ -52,8 +46,16 @@
 
 }
 
+.superFont {
+  font-weight: bold;
+  color: $white;
+}
+
 .singleContact {
-  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  vertical-align: middle;
+  margin: 0 auto;
   height: 350px;
   width: 350px;
   background-color: $white;

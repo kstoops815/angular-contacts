@@ -30,6 +30,7 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 	
 	$scope.switchFavorite = (contact, contactId) => {
 		contact.isFavorite = !contact.isFavorite;
+		console.log("contact is favorite", contact.isFavorite);
 		let updatedContact = ContactsService.createContactObject(contact);
 		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
 			showContacts();
