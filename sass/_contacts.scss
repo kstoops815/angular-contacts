@@ -1,3 +1,5 @@
+@import "_colors";
+
 .thumbnail{
   width: 300px;
 	height: 300px;
@@ -5,6 +7,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  
+  .superFont {
+    font-weight: bold;
+    color: $white;
+  }
 
   .delete {
     position: absolute;
@@ -36,11 +44,19 @@
     bottom: 5px;
   }
 
+}
 
+.superHero {
+  background-image: url("../images/justiceLeague3.png");
+  background-size: 300px 300px;
 
-  // .detail{
-  //   position: absolute;
-  //   left: 15px;
-  //   top: 15px;
-  // }
+}
+
+.singleContact {
+  text-align: center;
+  height: 350px;
+  width: 350px;
+  background-color: $white;
+  border: green solid 5px;
+  border-radius: 25%;
 }

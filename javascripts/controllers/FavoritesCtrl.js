@@ -2,6 +2,10 @@
 
 app.controller("FavoritesCtrl", function($location, $rootScope, $scope, ContactsService){
 
+	$scope.$on('$viewContentLoaded', function(event){
+    console.log('content loaded!');
+  });
+
 
 	const showContacts = () => {
 		ContactsService.getFavoriteContacts($rootScope.uid).then((results) => {
@@ -13,8 +17,8 @@ app.controller("FavoritesCtrl", function($location, $rootScope, $scope, Contacts
 
 	showContacts();
 	
-	$scope.unFavorite = (contact, contactId) => {
-		contact.isFavorite = false;
+	$scope.switchFavorite = (contact, contactId) => {
+		contact.isFavorite = !contact.isFavorite;
 		let updatedContact = ContactsService.createContactObject(contact);
 		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
 			showContacts();
@@ -23,8 +27,20 @@ app.controller("FavoritesCtrl", function($location, $rootScope, $scope, Contacts
 		});
 	};
 
+	$scope.toggleSuper = (contact) => {
+		console.log("contacts in makeSuper", contact);
+		contact.isSuper = !contact.isSuper;
+		console.log("contact isSuper", contact.isSuper);
+		let updatedContact = ContactsService.createContactObject(contact);
+		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
+			showContacts();
+		}).catch((error) => {
+			console.log("error in isSuper", error);
+		});
+	};
+
 	$scope.viewDetails = (contactId) => {
-		$location.path(`/contacts/details/${contactId}`);
+		$location.path(`/contacts/detail/${contactId}`);
 	};
 
 	$scope.editContactInfo = (contactId) => {

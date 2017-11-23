@@ -6,20 +6,20 @@
 		<input type="text" class="form-control" placeholder="Find a Contact" ng-model="searchText">
 	</div>
 
-	<div id="contacts">
-		<div ng-repeat="contact in contacts" class="col-sm-6 contact">
-			<div class="thumbnail">
-				<button class="btn btn-default delete" ng-click="deleteContact(contact.id)">X</button>
-				<button class="btn btn-default star" ng-if="!contact.isFavorite" ng-click="switchFavorite(contact, contact.id)"><i class="fa fa-star-o" aria-hidden="true" ></i></button>
-				<button class="btn btn-default star" ng-if="contact.isFavorite" ng-click="unFavorite(contact, contactId)"><i class="fa fa-star" aria-hidden="true" ></i></button>
-				<button class="btn btn-default pencil" ng-click="editContactInfo(contact.id)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-				<button class="btn btn-default search" ng-click="viewDetails(contact.id)"><i class="fa fa-search" aria-hidden="true"></i></button>
-				<button class="btn btn-default power"><i class="fa fa-superpowers" aria-hidden="true" ng-click="makeSuper(contact, contact.id)"></i></button>
-				<h3 class="name">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h3>
-				<p class="nickName">Nick Name:{{contact.nickName}}</p>
-				<p class="phoneNumber">{{contact.phoneNumber}}</p>
-				<p class="address">{{contact.address}}</p>
-				<p class="birthday">{{contact.birthday}}</p>
+	<div id="contacts" class="container-fluid">
+		<div ng-repeat="contact in contacts | filter: searchText" class="col-sm-3 contact">
+			<div class="thumbnail" ng-class="{'superHero': contact.isSuper}">
+				<button class="btn btn-default delete" data-toggle="tooltip" data-placement="top" title="Delete Contact" ng-click="deleteContact(contact.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+				<button class="btn btn-default star" data-toggle="tooltip" data-placement="top" title="Favorite?" ng-if="!contact.isFavorite" ng-click="switchFavorite(contact, contact.id)"><i class="fa fa-star-o" aria-hidden="true" ></i></button>
+				<button class="btn btn-default star" data-toggle="tooltip" data-placement="top" title="Favorite?" ng-if="contact.isFavorite" ng-click="unFavorite(contact, contactId)"><i class="fa fa-star" aria-hidden="true" ></i></button>
+				<button class="btn btn-default pencil" data-toggle="tooltip" data-placement="top" title="Edit Info" ng-click="editContactInfo(contact.id)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+				<button class="btn btn-default search" data-toggle="tooltip" data-placement="top" title="Details" ng-click="viewDetails(contact.id)"><i class="fa fa-search" aria-hidden="true"></i></button>
+				<button class="btn btn-default power" data-toggle="tooltip" data-placement="top" title="Super Hero?" ng-click="toggleSuper(contact)"><i class="fa fa-superpowers" aria-hidden="true" ></i></button>
+				<h3 class="name" ng-class="{'superFont': contact.isSuper}">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h3>
+				<h4 class="nickName" ng-class="{'superFont': contact.isSuper}">Nick Name:{{contact.nickName}}</h4>
+				<h4 class="phoneNumber" ng-class="{'superFont': contact.isSuper}">{{contact.phoneNumber}}</h4>
+				<h4 class="address" ng-class="{'superFont': contact.isSuper}">{{contact.address}}</h4>
+				<h4 class="birthday" ng-class="{'superFont': contact.isSuper}">{{contact.birthday}}</h4>
 			</div>
 		</div>
 	</div>

@@ -1,13 +1,21 @@
 
 @import "_contacts";
-
+@import "_colors";
 
 body {
-	background-color: lightblue;
+	background-color: palegoldenrod;
 }
 
-.superHero {
-	background-image: url("../images/JusticeLeague.jpg");
-	background-size: 300px 300px;
-	}
+.navbar {
+	background-color: $red;
+}
+
+.login {
+	height: 75px;
+	width: 400px;
+}
+
+
+
+
 
