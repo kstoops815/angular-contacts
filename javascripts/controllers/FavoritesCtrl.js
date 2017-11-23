@@ -28,9 +28,7 @@ app.controller("FavoritesCtrl", function($location, $rootScope, $scope, Contacts
 	};
 
 	$scope.toggleSuper = (contact) => {
-		console.log("contacts in makeSuper", contact);
 		contact.isSuper = !contact.isSuper;
-		console.log("contact isSuper", contact.isSuper);
 		let updatedContact = ContactsService.createContactObject(contact);
 		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
 			showContacts();
