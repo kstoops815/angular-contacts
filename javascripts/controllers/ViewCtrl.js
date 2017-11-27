@@ -3,10 +3,6 @@
 app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsService){
 	$scope.contact = {};
 
-	$scope.$on('$viewContentLoaded', function(event){
-    console.log('content loaded!');
-  });
-
 	const showContacts = () => {
 		ContactsService.getAllContacts($rootScope.uid).then((results) => {
 			$scope.contacts = results;
@@ -25,8 +21,6 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 		});
 	};
 
-	
-	
 	$scope.switchFavorite = (contact, contactId) => {
 		contact.isFavorite = !contact.isFavorite;
 		let updatedContact = ContactsService.createContactObject(contact);
@@ -47,15 +41,11 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 		});
 	};
 
-	
-
-	$scope.viewDetails = (contactId) => {
+		$scope.viewDetails = (contactId) => {
 		$location.path(`/contacts/detail/${contactId}`);
 	};
 
 	$scope.editContactInfo = (contactId) => {
 		$location.path(`/contacts/edit/${contactId}`);
 	};
-	
-
 });

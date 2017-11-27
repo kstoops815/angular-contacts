@@ -20,6 +20,4 @@ app.controller("EditCtrl", function($location, $routeParams, $scope, ContactsSer
 			console.log("error in editContact", error);
 		});
 	};
-
-
 });

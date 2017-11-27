@@ -2,11 +2,6 @@
 
 app.controller("FavoritesCtrl", function($location, $rootScope, $scope, ContactsService){
 
-	$scope.$on('$viewContentLoaded', function(event){
-    console.log('content loaded!');
-  });
-
-
 	const showContacts = () => {
 		ContactsService.getFavoriteContacts($rootScope.uid).then((results) => {
 			$scope.contacts = results;
@@ -44,11 +39,4 @@ app.controller("FavoritesCtrl", function($location, $rootScope, $scope, Contacts
 	$scope.editContactInfo = (contactId) => {
 		$location.path(`/contacts/edit/${contactId}`);
 	};
-
-
-
-
-
-
-
 });

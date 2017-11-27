@@ -7,7 +7,6 @@ let isAuth = (AuthService) => new Promise((resolve, reject) =>{
 	}
 });
 
-
 app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthService){
 	firebase.initializeApp(FIREBASE_CONFIG);
 	//watch method that fires on change of a route.  3 inputs. 
@@ -35,10 +34,6 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthService){
     }
   });
 });
-
-
-
-
 
 app.config(function($routeProvider){
 	$routeProvider
