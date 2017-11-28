@@ -1,0 +1,64 @@
+@import "_colors";
+
+.thumbnail{
+  width: 300px;
+	height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .delete {
+    position: absolute;
+    left: 130px;
+    bottom: 5px;
+  }
+
+  .star {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  .power {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+
+  .pencil {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .search {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+  }
+
+}
+
+.superHero {
+  background-image: url("../images/JusticeLeague3.png");
+  background-size: 300px 300px;
+
+}
+
+.superFont {
+  font-weight: bold;
+  color: $white;
+}
+
+.singleContact {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  vertical-align: middle;
+  margin: 0 auto;
+  height: 350px;
+  width: 350px;
+  background-color: $white;
+  border: green solid 5px;
+  border-radius: 25%;
+}

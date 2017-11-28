@@ -46,6 +46,7 @@ app.service("ContactsService", function($http, $q, $rootScope, FIREBASE_CONFIG){
  			"phoneNumber": contact.phoneNumber,
 			 "birthday": contact.birthday,
 			 "isFavorite": contact.isFavorite,
+			 "isSuper": contact.isSuper,
  			"uid": $rootScope.uid
 		};
 	};

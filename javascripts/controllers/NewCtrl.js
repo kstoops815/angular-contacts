@@ -3,9 +3,6 @@
 app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsService){
 	$scope.contact = [];
 
-	
-
-
 	$scope.saveNewContact = (contact) => {
 		let newContact = ContactsService.createContactObject(contact);
 		ContactsService.postContact(newContact).then(() => {
@@ -14,9 +11,5 @@ app.controller("NewCtrl", function($location, $rootScope, $scope, ContactsServic
 			console.log("error in saveNewContact", error);
 		});
 	};
-
-
-
-
 });
 

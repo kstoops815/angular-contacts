@@ -1,3 +1,16 @@
+
+@import "_contacts";
+@import "_colors";
+
 body {
-	background-color: lightblue;
+	background-color: palegoldenrod;
+}
+
+.navbar {
+	background-color: $red;
+}
+
+.login {
+	height: 75px;
+	width: 400px;
 }

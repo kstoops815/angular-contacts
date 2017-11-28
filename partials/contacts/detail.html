@@ -1,11 +1,11 @@
-<div>
-  <div class="col-xs-8 singleContact">
-    <button class="btn btn-default star" ng-if="!contact.isFavorite"><i class="fa fa-star-o" aria-hidden="true" ng-click="switchFavorite(contact, contact.id)"></i></button>
-    <button class="btn btn-default star" ng-if="contact.isFavorite"><i class="fa fa-star" aria-hidden="true" ng-click="unFavorite(contact, contactId)"></i></button>
-    <h3 class="name">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h3>
-    <p class="nickName">{{contact.nickName}}</p>
-    <p class="phoneNumber">{{contact.phoneNumber}}</p>
-    <p class="address">{{contact.address}}</p>
-    <p class="birthday">{{contact.birthday}}</p>
+<div class="container text-center">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="singleContact" ng-class="{'superHero': contact.isSuper}">
+      <h3 class="name" ng-class="{'superFont': contact.isSuper}">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h3>
+      <h4 class="nickName" ng-class="{'superFont': contact.isSuper}">{{contact.nickName}}</h4>
+      <h4 class="phoneNumber" ng-class="{'superFont': contact.isSuper}">{{contact.phoneNumber}}</h4>
+      <h4 class="address" ng-class="{'superFont': contact.isSuper}">{{contact.address}}</h4>
+      <h4 class="birthday" ng-class="{'superFont': contact.isSuper}">{{contact.birthday}}</h4>
+    </div>
   </div>
 </div>

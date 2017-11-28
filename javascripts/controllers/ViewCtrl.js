@@ -21,18 +21,8 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 		});
 	};
 
-	$scope.unFavorite = (contact, contactId) => {
-		contact.isFavorite = false;
-		let updatedContact = ContactsService.createContactObject(contact);
-		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
-			showContacts();
-			}).catch((error) => {
-				console.log("error in switchFavorite", error);
-		});
-	};
-	
 	$scope.switchFavorite = (contact, contactId) => {
-		contact.isFavorite = true;
+		contact.isFavorite = !contact.isFavorite;
 		let updatedContact = ContactsService.createContactObject(contact);
 		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
 			showContacts();
@@ -41,15 +31,21 @@ app.controller("ViewCtrl", function($location, $rootScope, $scope, ContactsServi
 		});
 	};
 
+	$scope.toggleSuper = (contact) => {
+		contact.isSuper = !contact.isSuper;
+		let updatedContact = ContactsService.createContactObject(contact);
+		ContactsService.updateContact(updatedContact, contact.id).then((result) => {
+			showContacts();
+		}).catch((error) => {
+			console.log("error in isSuper", error);
+		});
+	};
 
-
-	$scope.viewDetails = (contactId) => {
+		$scope.viewDetails = (contactId) => {
 		$location.path(`/contacts/detail/${contactId}`);
 	};
 
 	$scope.editContactInfo = (contactId) => {
 		$location.path(`/contacts/edit/${contactId}`);
 	};
-	
-
 });
